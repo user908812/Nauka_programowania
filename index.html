@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nauka programowania!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png">
+</head>
+<style>
+    h3.question {
+      font-family: "Roboto", sans-serif;
+      font-size: 24px;
+      text-align: center;
+      font-weight: 100;
+    }
+
+    .editor-container {
+      width: 1280px;
+      height: 1024px;
+      margin: 20px auto;
+      position: relative;
+    }
+
+    .editor {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      font-size: 20px;
+    }
+    .fullscreen-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 5px 10px;
+      cursor: pointer;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+</style>
+
+<body>
+
+    <nav>
+        <ul>
+            <li class="menuLI"><a href="#html" title="HTML">HTML</a></li>
+            <li class="menuLI"><a href="#css" title="CSS">CSS</a></li>
+            <li class="menuLI"><a href="#javascript" title="JavaScript">JavaScript</a></li>
+            <li class="menuLI"><a href="#rust" title="Rust">Rust</a></li>
+            <li class="menuLI"><a href="#python" title="Python">Python</a></li>
+        </ul>
+    </nav>
+
+    <h1>Strona do nauki różnych języków programowania!</h1>
+
+    <hr>
+    <h2>Skroty klawiszowe VS Code:</h2>
+    <hr>
+    <ol>
+        <li>p*20>lorem5</li>
+        <li></li>
+        <li></li>
+    </ol>
+    <hr>
+
+    <h2>Podstawy gita:</h2>
+    <hr>
+    Nazywamy folder tak jak repozytorium i wchodzimy w folder,
+    w ktorym chcemy miec repo klikamy "Git Bash Here". <br>
+    Najpierw wpisujemy <b>git init</b> aby utworzyc repozytorium.
+    <ol>
+        <li><b>git status</b> (pokazuje commity, pliki)</li>
+        <li><b>ls -a</b> (pokazuje wszystkie pliki)</li>
+        <li><b>cd &lt;moj_folder&gt;</b> (plik w ktorym jest repo)</li>
+        <li><b>touch 1.txt, git add 1.txt / git add -A</b> (dodaje plik)</li>
+        <li><b>git commit -m"</b>commit 1 - dodanie plikow<b>"</b> </li>
+        <li><b></b> </li>
+        <li><b></b> </li>
+    </ol>
+    <hr>
+
+    <h3 class="question">Learn JavaScript:</h3>
+    <div class="editor-container">
+        <button onclick="toggleFullscreen('editor1')" class="fullscreen-btn">Toggle Fullscreen</button>
+      <div id="editor1" class="editor">/*
+        typeof zmienna
+        const - zmienna, której nie można zmienić wartości!
+    */
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        // Variables
+    
+    const zmienna1 = 'Hello World!';
+    const zmienna2 = 20;
+    const zmienna3 = false;
+    const zmienna4 = { pierwszaWlasciwosc: 'hello world' };
+    function zmienna5() {
+        return 'Czesc! mam na imie Orzech';
+    }
+    
+        // Numbers
+    
+    let number1 = '1';
+    let number2 = 2;
+    number2++;
+    
+    console.log(Number(number1) + number2)
+    
+        // Array
+    
+    const firstArray = [10, 20, 30, 40];
+    const secondArray = [10, 'cos', { wlasciwosc: '1' }, [1, 2]];
+    /*
+    w Array liście są indexy, które się zaczynają od 0. Do kolsoli wpisujemy firstArray[0] (0 jako index)
+    */
+    
+    console.log(secondArray[1]);
+    
+        // Objects
+    
+    const object1 = {
+        prop1: 20,
+        prop2: 50
+    }
+    console.log(object1.prop1)
+    
+        // Functions
+    
+    const function1 = 
+        function() {
+        return 69;
+        }
+    
+    function1();
+    
+        // Operators
+    
+    let x = 1;
+    
+    20 === 2 && 10 === 12; //  false ( 2 dzialania musza spelniac warunek)   (&& = and)
+    20 === 2 || 10 === 12; //  true  (ponieważ 1 z działań spełnia warunek)  (|| = or)
+    !20 === 20; // false
+    
+    x++;
+    x--;
+    x+=5;
+    
+    100 % 50;
+    40 ** 2; // do potęgi
+    
+    20 == 20;
+    20 != 20;
+    20 === 20; // zwraca uwagę na to czy 1 z liczb ma inny typ np. '20' === 20 (nie prawda, czyli false)
+    20 !== 20; //     - || -
+    
+    
+    
+    20 > 20;
+    20 < 20;
+    20 >= 20;
+    20 <= 20;
+    
+    40 + 20;
+    40 - 20;
+    40 / 20;
+    40 * 20;
+    
+    let wynik;
+    
+    if (20 === '20') {
+        wynik = 'liczby są równe';
+    } else {
+        wynik = 'liczby nie są równe';
+    }
+    console.log(wynik);
+    
+        //if, else if, else
+    
+    if('value' === 'value1') {
+        console.log("values are equal");
+    } else if ('value1' > 0) {
+        console.log("value 'value1' is bigger than 0");
+    } else {
+        console.log("values aren't equal");
+    }
+    
+    /*
+    mozna dawac kilka na raz else if!
+    */
+        
+        // For loop
+    
+    for (let i = 0; i <= 100; i = i + 10) {  //for, (variable, do ilu liczy, co ile)
+        console.log(i);
+    }
+    
+    const arr = ['hsdgsubg', 'dfnisfbsihb.', 'bdzbfh', 'jfnkzdf', 20, 20, 40, 50, 'fbsdbfhhbdsfg', 'hdfbhbf'];
+    
+    for (let x = 0; x < arr.length; x++) {
+        if (typeof arr[x] === 'number') {
+            console.log(arr[x]);      // Jeśli x jest liczbą (numberem) to sie drukuje
+        }
+    }
+    
+        // Functions
+    
+    const strzalkowaFunkcja = () => {
+        console.log('strzalkowa Funkcja')
+    }
+    
+    strzalkowaFunkcja();
+    
+    
+    function xfunction() {
+        const variable1 = 60;
+        return variable1 > 70;  //False
+    }
+    
+    console.log(xfunction());
+    
+    
+    function xfunction() {
+        const liczba1 = 60;
+        return liczba1;
+        liczba1 = 70;  //  <---- NIE WOLNO PO RETURN!!!1!11!111!1!!
+    }
+    
+        // Build-in functions
+    
+    const mojeImie = 'orzech';
+    console.log(mojeImie.replace('e', '3').toUpperCase().split(" "));  /* gdy jest split to napis "ORZ3CH" jest w array liscie! */
+    console.log(Math.round(69.925));
+    
+    const array1 = [0, 1, 2, 3, 4, 5];
+    console.log(array1.pop());
+    
+        // Callbacks
+    
+    function mojCallback(jakisNumer) {
+        return jakisNumer * 2;
+    }
+    function glownaFunkcja(randomowyNumer, shouldCall, callback) {
+        let rezultat = randomowyNumer;
+    
+        if (shouldCall) {
+            rezultat = callback(randomowyNumer);
+        }
+        return rezultat;
+    }
+    glownaFunkcja(20, true, mojCallback);
+    
+        // Date
+    
+    const myDate = new Date('August 12 2025 12:30:00'); // month day year hour (mdyh)
+    console.log(myDate.toISOString());
+    console.log(myDate.getDate(), myDate.getMonth(), myDate.getFullYear())
+    
+        // Regular Expressions
+    
+    const regularnaExpresja = new RegExp('shit');
+    
+    const string1 = 'sh1t';
+    const string2 = 'olek_shit_xD@gmail.com';
+    
+    console.log('czy w "sh1t" znajduje sie slowo "shit": ' + regularnaExpresja.test(string1));
+    console.log('czy w "olek_shit_xD@gmail.com" znajduje sie slowo "shit": ' + regularnaExpresja.test(string2));
+    console.log('czy w literach A-Z, a-z i w liczbach 0-9 znajduje sie slowo "shit": ' + /[A-Za-z0-9 ]/.test(string2));  // spacja przed ] oznacza ze po wyrazach musi byc spacja!
+    /*
+    
+    /./ (ma na mysli kazdy znak)
+    
+    /^y/ (false, bo string2 nie zaczyna się literę y!)
+    
+    /y$/ (false, bo string2 nie kończy się literę y!)
+    
+    /(olek|bogdan)/ (true, bo string2 zawiera 1 z tych wyrazow!)
+    
+    */
+    
+        // Array Methods
+    
+    const myColors = ['red', 'green', 'blue', 'silver'];
+    
+    console.log('czy myColors zawiera kolor silver: ' + myColors.includes('silver'));
+    
+        // Math utilities
+    
+    console.log('Wartosc pi: ' + Math.PI);
+    console.log(Math.min(3, 4, 5), Math.max(3, 4, 5));
+    console.log(Math.random());
+    
+    const arraylista = ['69', '420', 'cos', 1337, 21];
+    const randomIndex = Math.round(Math.random() * arraylista.length);
+    console.log(arraylista[randomIndex]);
+    
+        // Error types
+    
+    try { // napisz poprostu try, ctrl + spacja
+        var jakasliczba = 20;
+        jakasliczba.toUpperCase();   // ZLE!!1!1!  liczba nie moze byc z duzej litery debilu
+    } catch (error) {
+        console.log(error instanceof TypeError);
+        console.log(error.message);
+    }
+    
+    
+    
+    </div>
+    </div>
+
+    <h3 class="question">Learn Python:</h3>
+    <div class="editor-container">
+        <button onclick="toggleFullscreen('editor2')" class="fullscreen-btn">Toggle Fullscreen</button>
+      <div id="editor2" class="editor">
+        '''
+        def funkcja1():
+          array = ["Tom", "Jim", "Xawery", "Tomasz"]
+          array.remove("Tom")
+          array.sort
+        '''
+        from math import *
+        print("\"Hello\" \n World!")
+        
+        # Variables (str int float)
+        
+        x = "Hello"
+        y = 10.23
+        z = True
+        
+        string = "xddd"
+        print(string[2].upper())
+        
+        # Math (round floor ceil sqrt ** [do potęgi])
+        
+        print(round(4.55))
+        print(floor(2.9))
+        print(ceil(2.9))
+        print(sqrt(36))
+        
+        # input
+        
+        userName = str(input("Jak masz na imię?: "))      
+        print("Hello " + userName + "!")                  
+        
+        # Mój kalkulator!
+        
+        num1 = float(input("Podaj pierwszą liczbę: "))
+        znak = input("Jaką operację wykonać: ")
+        num2 = float(input("Podaj drugą liczbę: "))
+        
+        if (znak == "+"):
+            print("Wynik dodawania to: ", num1 + num2)
+        elif (znak == "-"):
+            print("Wynik odejmowania to: ", num1 - num2)
+        elif (znak == "*"):
+            print("Wynik mnożenia to: ", num1 * num2)
+        elif (znak == "/"):
+            print("Wynik dzielenia to: ", num1 / num2)
+        elif (znak == "**"):
+            print(num1, " do potęgi ", num2, " to: ", num1 ** num2)
+        else:
+            print("nie ma takiego znaku spierdalaj")
+        
+        # List
+        
+        lista = [4.5, ":D", True, 'E']
+        print(lista[1])
+        
+        indexes = [0, 1, 2, 3, 4]
+        friends = ["Kevin", "Karen", "Jim", "Oscar", "Toby"]
+        friends.extend(indexes)
+        friends.remove("Jim")
+        # friends.sort()    (nie działa, gdy są indexes i friends jednocześnie!)
+        print(friends)
+        
+        # Tuples
+        
+        coordinates = (345, 112, 169) # można to wziąść w array listę
+        
+        # Functions (w say_HI() wpisujemy kolejno imię i wiek)
+        
+        def say_HI(name, age):
+            print("Hello " + name + ", you are " + age + " years old!")
+        say_HI("Mike Tyson", "57")
+        say_HI("Elon Musk", "52")
+        
+        # Return (dostaje informacje z powrotem z funkcji)
+        
+        def cube(num):
+            return num*num*num
+        
+        wynik = cube(3)
+        print(wynik)
+        
+        # if statement (czyJestemGlodny musi być True, inaczej wydrukuje "Jestem najedzony"!)
+        
+        jestemGlodny = False
+        jestemWysoki = True
+        
+        if jestemGlodny or jestemWysoki:
+            print("Jestem głodny/wysoki")
+        elif jestemGlodny and not(jestemWysoki):
+            print("Jestem głodny ale nie wysoki")
+        else:
+            print("Jestem najedzony")
+        
+            # or - 1 ze zmiennych musi być True, aby otrzymać True
+            # and - 2 zmienne muszą być True, aby otrzymać True
+        
+        def najwiekszynumer(n1, n2, n3):
+            if n1 > n2 and n1 > n3:
+                return n1 
+            elif n2 > n1 and n2 > n3:
+                return n2
+            else:
+                return n3
+        print(najwiekszynumer(2, 1, 69))
+        
+        # Dictionary
+        
+        months = {
+            "Jan": "January",
+            "Feb": "February",
+            "Mar": "March",
+        }
+        
+        print(months.get("F3b", "Not a valid key!"))
+        
+        # While loop
+        
+        i = 1
+        while i <= 10:
+            print(i)
+            i += 1
+        print("Koniec pętli")
+        
+        # Loop Exercise
+        
+        sekretny_wyraz = "123"
+        zgadniecie = input("Witaj! spróbuj odgaść hasło! :D powodzenia")
+        liczba_zgadniec = 0
+        limit_zgadniec = 3
+        nie_ma_juz_prob = False
+        
+        while (zgadniecie != sekretny_wyraz and nie_ma_juz_prob == False):
+            if (liczba_zgadniec < limit_zgadniec):
+                zgadniecie = input("Wpisz sekretny wyraz: ")
+                liczba_zgadniec += 1
+            else:
+                nie_ma_juz_prob = True
+            
+            if (nie_ma_juz_prob):
+                print("Nie ma juz prób! przegrałeś!")
+            
+            if (zgadniecie == sekretny_wyraz):
+                print("Zgadłeś!")
+        
+        # For loop
+        for variable1 in "hubert ma malego":
+            print(variable1)
+        for orzech in range(3, 10):
+            print(orzech)
+            # drukuje liczby od 3 do 10!
+        
+        # 2D Lists and Nested Loops
+        
+        tel = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9],
+            ['*', 0, '#']
+        ]
+        
+        print(tel[3][0]) # wydrukuje '*'
+        
+        for kolejnosc in tel:
+            for liczby in kolejnosc:
+                print(liczby)  # Drukuje wszystkie liczby z tel!
+                
+        # Comments
+        
+            #to jest komentarz (aby napisac wieloliniowy musimy napisac to:  ''' )
+            
+            '''
+            to tez jest komentarz
+            '''
+        # Try Except
+        
+        try:
+            liczba = int(input("Wpisz liczbę (nie tekst): "))
+            print(liczba)
+        except:
+            print("Błąd! Nie możesz wpisać nic innego niż liczba!")
+           
+        try:
+            value = 10/0 
+        except ZeroDivisionError:  # Można wpisać typ błędu!
+            print("Pamiętaj chol*ro nie dziel przez 0!")
+            
+        # Files:
+        '''
+        "r" - read
+        "a" - dopisuje do pliku
+        '''
+                        # Read
+        
+        moj_plik = open("plik.txt", "r")
+        
+        print(moj_plik.read()) # Możesz dać readline() aby wydrukowalo linie tekstu z "plik.txt"
+        
+        moj_plik.close()
+        
+                     # Tworzenie pliku  
+                       
+        new_file = open("index.html", "a")               
+        print(moj_plik.write("\n<h1> Siema! </h1>"))
+        moj_plik.close()
+                
+        # Modules & pip
+        
+        import random
+        import jakis_moj_plik
+         
+        class Student:
+            
+            def __init__(self, imie, zawod, iq, czy_jest_pelnoletni):
+                self.imie = imie
+                self.zawod = zawod
+                self.iq = iq
+                self.czy_jest_pelnoletni = czy_jest_pelnoletni
+                
+            def czy_masz_duzo_iq(self):
+                if self.iq >= 100:
+                    return True
+                else:
+                    return False
+        '''
+        inny plik:
+        '''
+        from nazwa_pliku import Student
+        
+        student1 = Student("Orzech", "programista", 102, False)
+        print(str(student1.iq) + " " + str(czy_masz_duzo_iq))
+        
+        class kucharz1:
+            def sniadanie(self):
+                print("zrobie ci sniadanie")
+            def obiad(self):
+                print("zrobie ci obiad")
+            def kolacja(self):
+                print("zrobie ci kolacje")
+                
+                # Kucharz 2 otrzymuje uprawnienia pierwszego:
+                
+        from nazwapliku import kucharz1
+        
+        class kucharz2(kucharz1):
+            def podwieczorek(self):
+                print("zrobie ci podwieczorek")
+        
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.3/ace.js"></script>
+    <script>
+        function toggleFullscreen(editorId) {
+          let editor = ace.edit(editorId);
+          const element = document.getElementById(editorId);
+  
+          if (!document.fullscreenElement) {
+            element.requestFullscreen().catch((err) => {
+              console.error(`Error attempting to enable full-screen mode: ${err.message}`);
+            });
+          } else {
+            document.exitFullscreen();
+          }
+        }
+  
+        let editor1 = ace.edit("editor1", {
+          theme: "ace/theme/tomorrow_night",
+          mode: "ace/mode/javascript",
+        });
+  
+        let editor2 = ace.edit("editor2", {
+          theme: "ace/theme/tomorrow_night",
+          mode: "ace/mode/python",
+        });
+      </script>
+    <hr>
+    <h3>HTML</h3>
+    <p>HTML (Hypertext Markup Language) to standardowy język znaczników używany do strukturyzowania zawartości na
+        stronach internetowych. <br>
+        Jest to podstawowy budulec stron internetowych i jest używany do opisu elementów takich jak tekst, obrazy,
+        linki, formularze itp.</p>
+    <hr>
+
+    <!-- <h3>Rust</h3>
+    <p>Rust to nowoczesny, systemowy język programowania, stworzony przez Mozillę, cechujący się wydajnością oraz
+        bezpieczeństwem pamięci. <br>
+        Został zaprojektowany z myślą o równoczesnym zminimalizowaniu błędów programistycznych i umożliwieniu
+        efektywnego programowania w kontekście wielowątkowości.</p>
+
+    <h3>Python</h3>
+    <p>Python to dynamiczny, wysokopoziomowy język programowania, znany ze swojej czytelności i prostoty składni. Python
+        jest powszechnie <br>
+        używany do różnorodnych zastosowań, takich jak web development, data science, sztuczna inteligencja i
+        automatyzacja.</p>  -->
+
+    <section id="html">
+        <table border="1" width="25%">
+
+            <tr>
+                <th colspan="1">Znacznik</th>
+                <th colspan="1">Przykład</th>
+            </tr>
+
+            <tr>
+                <td colspan="1">‹i› ‹em›</td>
+                <td colspan="1"><em> kursywa </em></td>
+            </tr>
+
+            <tr>
+                <td colspan="1">‹mark›</td>
+                <td colspan="1"><mark> zaznaczony tekst </mark></td>
+            </tr>
+
+            <tr>  
+                <td colspan="1">‹u›</td>
+                <td colspan="1"><u> podkreślony tekst </u></td>
+            </tr>
+
+            <tr>              
+                <td colspan="1">‹b›</td>
+                <td colspan="1"><b> pogrubiony tekst </b></td>
+            </tr>
+            <tr>               
+                <td colspan="1">‹small›</td>
+                <td colspan="1"><small> mały tekst </small></td>
+            </tr>
+
+            <tr>               
+                <td colspan="1">‹sub› ‹sup›</td>
+                <td colspan="1"><sub> tekst sub </sub><sup>tekst sup</sup></td>
+            </tr>
+            <tr>             
+                <td colspan="1">‹s›</td>
+                <td colspan="1"><s> przekreślony tekst </s></td>
+            </tr>
+            <tr>          
+                <td colspan="1">‹h1›-‹h6›</td>
+                <td colspan="1">h1 największy, h6 najmniejszy</td>
+            </tr>
+            <tr>    
+                <td colspan="1">‹p›</td>
+                <td colspan="1">
+                    <p>paragraf</p>
+                </td>
+            </tr>
+            <tr>   
+                <td colspan="1">‹hr›</td>
+                <td colspan="1">--------------------------------</td>
+            </tr>
+            <tr>  
+                <td colspan="1">‹img src="" width="" height="" alt="" loading=""›</td>
+                <td colspan="1"><img src="painting.png" width="50" height="50" alt="image"></td>
+            </tr>
+            <tr> 
+                <td colspan="1" class="selectedtagtolearn">‹a href="mailto:/tel:"›Link‹/a›</td>
+                <td colspan="1"><a href="mailto:jakis_mail@gmail.com">Link</a></td>
+            </tr>
+            <tr>
+                <td colspan="1">‹a href="" target="_blank"›Link‹/a›</td>
+                <td colspan="1"><a href="https://youtube.com/" target="_blank">Link</a></td>
+            </tr>
+            <tr>
+                <td colspan="1" class="selectedtagtolearn">‹abbr title=""›</td>
+                <td colspan="1"><abbr title="">kropki pod tekstem</abbr></td>
+            </tr>
+            <tr>
+                <td colspan="1" class="selectedtagtolearn">‹address›</td>
+                <td colspan="1">
+                    <address>nr telefonu: 666 666 666</address>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">‹dl›, ‹dt›, ‹dd›</td>
+                <td colspan="1">
+                    <dl>
+                        <dt>tekst dt</dt>
+                        <dd>opis dd</dd>
+                    </dl>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">‹ol type="A"›</td>
+                <td colspan="1">
+                    <ol type="A">
+                        <li>element1</li>
+                        <li>element2</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">‹ul type="square"›</td>
+                <td colspan="1">
+                        <div>&nbsp; ■ element1</div>
+                        <div>&nbsp; ■ element2</div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">‹nav›</td>
+                <td colspan="1">
+                    <nav>‹nav› <br> ‹ul› <br> ‹li›‹a href="#cos"›cos‹/a› <br> ‹/ul› <br> ‹/nav›</nav>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" class="selectedtagtolearn">‹table <u>border="1" width</u>› <u>‹thead›</u> <u>‹tbody›</u> <u>‹tfoot›</u> ‹tr› ‹th› <br> ‹td <u>rowspan/colspan</u>›</td>
+                <td colspan="1"> ‹table›<br>‹tr› <br>‹th›nagłówek<br>‹td›tekst<br>‹/tr›<br>‹/table›</td>
+            </tr>
+            <tr>
+                <td colspan="1">‹figure› ‹figcaption›</td>
+                <td colspan="1">‹figure›<figure><img src="figure.png" width="60" height="60" alt="figure">
+                        <figcaption>‹figcaption›Caption</figcaption>
+                    </figure>‹/figure›</td>
+            </tr>
+            <tr>
+                <td colspan="1">‹code›</td>
+                <td colspan="1"><code>Tekst ,ktory wyglada jak w kodzie</code></td>
+            </tr>
+            <tr>
+                <td colspan="1">‹header› ‹main› ‹section id=""› ‹footer›</td>
+                <td colspan="1">header<br>to jest moja strona<br>/header<br>main<br>section<br>tutaj nauczysz sie
+                    html<br>/section<br>/main<br>footer<br>wroc na gore strony:<br>/footer</td>
+            </tr>
+            <tr>
+                <td colspan="1">‹aside› ‹details› ‹summary› ‹p›</td>
+                <td colspan="1">
+                    <aside>
+                        <details>
+                            <summary>(It's inside summary)</summary>
+                            <p>(It's inside P)</p>
+                        </details>
+                    </aside>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">‹label› ‹input›</td>
+                <td colspan="1">‹label for="fname">Imię:‹/› ‹input type="text" name="fname" id="fname"
+                    <u>placeholder="napisz imię" autocomplete="name" required autofocus</u>› <br> <label for="firstName"></label>
+                    <input type="text" name="firstName" id="firstName" placeholder="Type Something..." autocomplete="name"
+                        required autofocus></td>
+                        </tr>
+                        <tr>
+                            <td colspan="1">‹fieldset› ‹legend›</td>
+                            <td colspan="1"><fieldset><legend>Legenda</legend><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, excepturi.</p></fieldset></td>
+                        </tr>
+                        <tr>
+                            <td colspan="1">‹select name id› ‹optgroup <u>label</u>› ‹option value›</td>
+                            <td colspan="1"><select name="wybierz" id="wybierz"><option value="wybierzcos">wybierz</option><optgroup label="opcje 1-2"><option value="1">1</option><option value="2">2</option></optgroup><optgroup label="opcje 3-4"><option value="3">3</option><option value="4">4</option></optgroup></select></td>
+                        </tr>
+                        <tr>
+                            <td colspan="1">‹video src="" width <u>controls autoplay muted loop</u>›</td>
+                            <td colspan="1"><video src="vid.mp4" width="100px" height="100px" autoplay muted loop></video></td>
+                        </tr>
+                        <tr>
+                            <td colspan="1">‹iframe width›</td>
+                            <td colspan="1"><iframe src="https://user908812.github.io/fnaf/" frameborder="0"></iframe></td>
+                        </tr>
+                        <tr>
+                            <td colspan="1">‹button type onclick›</td>
+                            <td colspan="1"><button>Button</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="1">‹textarea placeholder›</textarea></td>
+                            <td colspan="1"><textarea name="area" id="area" cols="20" rows="10" placeholder="Wpisz coś..." required></textarea></td>
+                        </tr> 
+                        <tr>
+                            <td colspan="1">‹audio <u>controls autoplay muted loop</u>›</td>
+                            <td colspan="1"><audio src="vid.mp4" controls muted></audio></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><b>Shift + alt + ↓</b> (wkleja tekst niżej)<br><b>p*10>lorem20</b> (10 akapitów tekstu po 20 słów)</td>
+                        </tr> 
+                        </table>
+    </section>
+    <hr>
+        <h3>CSS</h3>
+<p>CSS (Cascading Style Sheets) to język używany do określania wyglądu i stylu dokumentów HTML. Jest on używany do
+definiowania, jak <br>
+elementy HTML powinny być wyświetlane na stronie internetowej.</p>
+<hr>
+    <section id="css">
+        <table width="45%" border="1">
+            <thead>
+            <tr>
+                <td>&nbsp;</td>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <tr>
+                <td class="akapitTD">&nbsp;</td>
+                <td>Text-transform</td>
+                <td>Capitalize, UPPERCASE, lowercase</td>
+            </tr>
+            <tr>
+                <td class="akapitTD">Akapit</td>
+                <td><span style="margin-left: 80px;">text-indent</span></td>
+                <td>1px</td>
+            </tr>
+            <tr>
+                <td class="akapitTD">&nbsp;</td>
+                <td><span style="border: 2px solid green;">outline</span></td>
+                <td>1px solid green</td>
+            </tr>
+            <tr>
+                <td class="akapitTD">Odstep miedzy zdaniami</td>
+                <td><span style="line-height: 3;">line-height</span></td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td class="akapitTD">&nbsp;</td>
+                <td><span style="letter-spacing: 5px;">letter-spacing</span></td>
+                <td>1px</td>
+            </tr>
+            <tr>
+                <td class="akapitTD">&nbsp;</td>
+                <td><span style="word-spacing: 10px;">word spacing</span></td>
+                <td>1px</td>
+            </tr>
+            <tr>
+                <td class="akapitTD">&nbsp;</td>
+                <td><span style="font-weight: 800;">font-weight</span></td>
+                <td>800/bold</td>
+            </tr>
+            <tr>
+                <td class="akapitTD">&nbsp;</td>
+                <td><span style="cursor: not-allowed;">cursor</span></td>
+                <td>not-allowed</td>
+            </tr>
+            <tr>
+                <td class="akapitTD">&nbsp;</td>
+                <td>list-style</td>
+                <td>square inside</td>
+            </tr>
+            <tr>
+                <td class="akapitTD">&nbsp;</td>
+                <td>display</td>
+                <td>inline-block</td>
+            </tr>
+            <tr>
+                <td class="akapitTD">&nbsp;</td>
+                <td>columns</td>
+                <td>4 250px</td>
+            </tr>
+            <tr>
+                <td class="akapitTD">Linia oddzielająca kolumny</td>
+                <td>column-rule</td>
+                <td>3px solid black</td>
+            </tr>
+            <tr>
+                <td class="akapitTD">Wyrównanie kolumn</td>
+                <td>column-gap</td>
+                <td>3rem</td>
+            </tr>
+            <tr>
+                <td class="akapitTD">&nbsp;</td>
+                <td>a:</td>
+                <td>active, visited, hover, focus</td>
+            </tr>
+            <tr>
+                <td class="akapitTD">&nbsp;</td>
+                <td>position</td>
+                <td>absolute, fixed, sticky <br> (z-index: 1; aby box byl nad drugim boxem)</td>
+            </tr>
+            <tr>
+                <td class="akapitTD">&nbsp;</td>
+                <td>filter</td>
+                <td>brightness(150%)</td>
+            </tr>
+            <tr>
+                <td class="akapitTD">Wyrównuje border z tekstem</td>
+                <td>overflow</td>
+                <td>auto</td>
+            </tr>
+            <tr>
+                <td class="akapitTD">&nbsp;</td>
+                <td>float</td>
+                <td>left</td>
+            </tr>
+            <tr>
+                <td class="akapitTD">&nbsp;</td>
+                <td>clear</td>
+                <td>left</td>
+            </tr>
+            <tr>
+                <td class="akapitTD"></td>
+                <td>top/left/right/bottom</td>
+                <td>1px</td>
+            </tr>
+            <tr>
+                <td class="akapitTD">Dodaj do tagu &lt;html&gt;</td>
+                <td>scroll-behavior</td>
+                <td>smooth</td>
+            </tr>
+            <tr>
+                <td class="akapitTD"></td>
+                <td>background-image</td>
+                <td>url()</td>
+            </tr> 
+            <tr>
+                <td class="akapitTD"></td>
+                <td>-webkit-background-clip</td>
+                <td>text</td>
+            </tr> 
+            <tr>
+                <td class="akapitTD"></td>
+                <td>bgsize, bgposition</td>
+                <td>100%, top right</td>
+            </tr> 
+            <tr>
+                <td class="akapitTD">W :root</td>
+                <td>--BGCOLOR: red;</td>
+                <td>var(--BGCOLOR)</td>
+            </tr> 
+            <tr>
+                <td class="akapitTD"></td>
+                <td>transform:</td>
+                <td>translateX, rotateX, scaleX, skewX</td>
+            </tr> 
+            <tr>
+                <td class="akapitTD">W div:hover + bgcolor</td>
+                <td>transition:</td>
+                <td>all 2s 0.5s</td>
+            </tr> 
+            <tr>
+                <td class="akapitTD"></td>
+                <td>animation: 5s nazwa1; <br>
+                delay, iteration-count, direction</td>
+                <td>@keyframes nazwa1 {<br>
+                    0%, 33%, 66%, 100% <br>
+                }</td>
+            </tr> 
+        </tbody>
+        </table>
+    </section>
+    <hr>
+    <h3>JavaScript</h3>
+    <hr>
+    <h4>Przydatne funkcje:</h4>
+    <ol>
+        <li>includes()</li>
+        <li>startsWith("xd")</li>
+        <li>endsWith("?")</li>
+        <li>join(" - ") dodaje "-" pomiedzy elementami listy array</li>
+        <li>reverse()</li>
+    </ol>
+    <hr>
+    <p>JavaScript to dynamiczny język programowania powszechnie używany do tworzenia interaktywnych elementów na
+        stronach internetowych. <br>
+        Jest on interpretowany przez przeglądarkę internetową i umożliwia dodawanie różnych funkcji do stron, takich jak
+        walidacja <br>
+        formularzy, manipulacja treścią strony, obsługa zdarzeń użytkownika i wiele innych.</p>
+    <hr>
+    <section id="javascript">
+        <table border="1" width="25%">
+            <tr>
+                <th>Funkcja</th>
+                <th>Co oznacza</th>
+            </tr>
+            <tr>
+                <td colspan="1">const/let xd = 'str'/20/true/{ prop1: '1', prop2: 20 }/[0, 1, 2]</td>
+                <td colspan="1">zmienna xd</td>
+            </tr>
+            <tr>
+                <td>function czesc() { <br> return 'Czesc!'; <br> }</td>
+                <td>Czesc!</td>
+            </tr>
+            <!-- <tr>
+                            <td colspan="1"></td>
+                            <td colspan="1"></td>
+                        </tr> -->
+            <tr>
+            <td colspan="1">let a = 1; <br>
+                a++;</td>
+            <td colspan="1">a = 2</td>
+            </tr> 
+            <tr>
+                <td colspan="1">const arr1 = [0, 'cos', 2] <br> arr1[1]</td>
+                <td>program wyswietli 'cos'</td>
+            </tr>
+            <tr>
+                <td colspan="1">const object1 = { <br>
+                    prop1: 20, <br>
+                    prop2: 50 <br>
+                } <br>
+            object1.prop1</td>
+                <td>program wyswietli 20</td>
+            </tr>
+            <tr>
+                <td>20 === 2 && 10 === 12 (false) <br> 20 === 2 || 10 === 12 (true) <br> !20 === 20 (false)</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    40 ** 2 <br>
+                    20 == 20 <br>
+                    20 != 20 <br>
+                    20 === 20 <br>
+                    20 !== 20 <br>
+                    20 &gt; 20 <br>
+                    20 &lt; 20 <br>
+                    20 &gt;= 20 <br>
+                    20 &lt;= 20</td>
+                    <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>if (a > b) { <br>
+                        a jest większe od b <br>
+                    } else if (a == b) { <br>
+                        a jest równe b <br>
+                    } else { <br>
+                        b jest większe od a <br>
+                    }
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>for (let i = 0; i &lt;= 100; i+=10) { <br>
+                    console.log(i); <br>
+                }</td>
+                <td>for (zmienna, do ilu liczy, co ile)</td>
+            </tr>
+            <tr>
+                <td>mojeImie.replace('e', '3').toUpperCase()</td>
+                <td>program wyświetli ORZ3CH</td>
+            </tr>
+            <tr>
+                <td>const myDate = new Date('August 12 2025 12:30:00'); <br> myDate.toISOString()</td>
+                <td>2025-12-08</td>
+            </tr>
+            <tr>
+                <td>const regularnaExpresja = <u>new RegExp('shit');</u> <br><br> const string2 = 'olek_shit_xD@gmail.com'; <br><br> console.log('czy w "olek_shit_xD@gmail.com" znajduje sie slowo "shit": ' + regularnaExpresja<u>.test(string2));</u></td>
+                <td>program sprawdza, czy w string2 jest słowo 'shit'</td>
+            </tr>
+            <tr>
+                <td>const myColors = ['red', 'green', 'blue', 'silver']; <br>
+                    'czy myColors zawiera kolor silver: ' + myColors.includes('silver'); (true)</td>
+                    <td>program sprawdza, czy myColors zawiera silver</td>
+            </tr>
+            <tr>
+                <td>const arraylista = ['69', '420', 'cos', Math.PI, 21]; <br><br>
+                    const randomIndex = Math.round(Math.random() * arraylista.length); <br><br>
+                    console.log(arraylista[randomIndex]);</td>
+                    <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>try { <br>
+                    var jakasliczba = 20; <br>
+                    jakasliczba.toUpperCase(); (Zle liczba nie może być UPPERCASE!) <br>
+                } catch (error) { <br>
+                    console.log(error instanceof TypeError); <br>
+                    console.log(error.message); <br>
+                }</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>window.location.reload()</td>
+                <td>Odświeża stronę</td>
+            </tr>
+            <tr>
+                <td>window.alert('siema') <br> window.open('https://user908812.github.io/fnaf/')</td>
+                    <td>alert i otwieranie okna z linkiem</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="rust">
+        <!-- Dodaj treść do sekcji Rust -->
+    </section>
+
+    <section id="python">
+        <!-- Dodaj treść do sekcji Python -->
+    </section>
+
+</body>
+
+</html>
